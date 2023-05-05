@@ -1,0 +1,22 @@
+solver:
+    name: UnrolledADMMFDL
+    nb_iteration: 12
+    rho: 1.0
+    
+task:
+    nb_fdl: 30
+    noise_level: 0.0
+    disparity_focal_stack: [-0.3,0.3]
+        
+data:
+    nb_channels: 3
+    angular_dims: 5
+    number_of_shots: 2
+
+training:
+    epochs: 500
+    batch_size: 1
+    learning_rate: 0.00001
+    patch_size: 64
+    patch_per_epoch: 1
+    scheduler_step_size: 100
