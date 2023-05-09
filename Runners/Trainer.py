@@ -49,7 +49,7 @@ class Trainer():
         start_epoch = 0
         if os.path.exists(os.path.join("Models/"+self.model_name+".ckpt")):
             print("USING PRETRAINED MODEL IN:",os.path.join("Models/"+self.model_name+".ckpt"))
-            if self.device != 'cpu':
+            if self.device.type != 'cpu':
                 saved_dict = torch.load(os.path.join("Models/"+self.model_name+".ckpt"))
             else:
                 saved_dict = torch.load(os.path.join("Models/"+self.model_name+".ckpt"), map_location='cpu')

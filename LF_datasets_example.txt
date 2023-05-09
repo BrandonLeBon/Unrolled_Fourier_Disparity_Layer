@@ -1,1 +1,1 @@
-/LF_example/
+LF_example/
